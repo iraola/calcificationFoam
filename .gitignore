@@ -13,6 +13,7 @@
 
 # if the files to be tracked are in subdirectories
 !src/solids4FoamModels/materialModels/mechanicalModel/mechanicalLaws/nonLinearGeometryLaws/incompressibleHumphreyYinElastic/*
+!src/solids4FoamModels/Make
 #
 
 notes.txt
