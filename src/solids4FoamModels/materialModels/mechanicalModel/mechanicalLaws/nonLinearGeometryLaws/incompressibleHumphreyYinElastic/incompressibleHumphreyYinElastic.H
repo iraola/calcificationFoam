@@ -22,7 +22,7 @@ License
     along with foam-extend.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    incompressibleMooneyRivlinElastic
+    incompressibleHumphreyYinElastic
 
 Description
     Incompressible 3-parameter Mooney-Rivlin model, with strain-energy
@@ -71,7 +71,7 @@ Description
 
 
 SourceFiles
-    incompressibleMooneyRivlinElastic.C
+    incompressibleHumphreyYinElastic.C
 
 Author
     Iago Lessa de Oliveira, FEIS/UNESP/UCD.
@@ -79,8 +79,8 @@ Author
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef incompressibleMooneyRivlinElastic_H
-#define incompressibleMooneyRivlinElastic_H
+#ifndef incompressibleHumphreyYinElastic_H
+#define incompressibleHumphreyYinElastic_H
 
 #include "mechanicalLaw.H"
 
@@ -93,7 +93,7 @@ namespace Foam
                          Class linearElastic Declaration
 \*---------------------------------------------------------------------------*/
 
-class incompressibleMooneyRivlinElastic
+class incompressibleHumphreyYinElastic
 :
     public mechanicalLaw
 {
@@ -120,10 +120,10 @@ class incompressibleMooneyRivlinElastic
     // Private Member Functions
 
         //- Disallow default bitwise copy construct
-        incompressibleMooneyRivlinElastic(const incompressibleMooneyRivlinElastic&);
+        incompressibleHumphreyYinElastic(const incompressibleHumphreyYinElastic&);
 
         //- Disallow default bitwise assignment
-        void operator=(const incompressibleMooneyRivlinElastic&);
+        void operator=(const incompressibleHumphreyYinElastic&);
 
 public:
 
@@ -136,7 +136,7 @@ public:
     // Constructors
 
         //- Construct from dictionary
-        incompressibleMooneyRivlinElastic
+        incompressibleHumphreyYinElastic
         (
             const word& name,
             const fvMesh& mesh,
@@ -147,7 +147,7 @@ public:
 
     // Destructor
 
-        virtual ~incompressibleMooneyRivlinElastic();
+        virtual ~incompressibleHumphreyYinElastic();
 
 
     // Member Functions

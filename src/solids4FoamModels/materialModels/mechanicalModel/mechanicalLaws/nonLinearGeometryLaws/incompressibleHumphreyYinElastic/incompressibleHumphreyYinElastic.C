@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "incompressibleMooneyRivlinElastic.H"
+#include "incompressibleHumphreyYinElastic.H"
 #include "addToRunTimeSelectionTable.H"
 #include "fvc.H"
 #include "fvm.H"
@@ -33,17 +33,17 @@ License
 
 namespace Foam
 {
-    defineTypeNameAndDebug(incompressibleMooneyRivlinElastic, 0);
+    defineTypeNameAndDebug(incompressibleHumphreyYinElastic, 0);
     addToRunTimeSelectionTable
     (
-        mechanicalLaw, incompressibleMooneyRivlinElastic, nonLinGeomMechLaw
+        mechanicalLaw, incompressibleHumphreyYinElastic, nonLinGeomMechLaw
     );
 }
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
 // Construct from dictionary
-Foam::incompressibleMooneyRivlinElastic::incompressibleMooneyRivlinElastic
+Foam::incompressibleHumphreyYinElastic::incompressibleHumphreyYinElastic
 (
     const word& name,
     const fvMesh& mesh,
@@ -75,13 +75,13 @@ Foam::incompressibleMooneyRivlinElastic::incompressibleMooneyRivlinElastic
 
 // * * * * * * * * * * * * * * * * Destructor  * * * * * * * * * * * * * * * //
 
-Foam::incompressibleMooneyRivlinElastic::~incompressibleMooneyRivlinElastic()
+Foam::incompressibleHumphreyYinElastic::~incompressibleHumphreyYinElastic()
 {}
 
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
-Foam::tmp<Foam::volScalarField> Foam::incompressibleMooneyRivlinElastic::rho() const
+Foam::tmp<Foam::volScalarField> Foam::incompressibleHumphreyYinElastic::rho() const
 {
     return tmp<volScalarField>
     (
@@ -103,7 +103,7 @@ Foam::tmp<Foam::volScalarField> Foam::incompressibleMooneyRivlinElastic::rho() c
 }
 
 
-Foam::tmp<Foam::volScalarField> Foam::incompressibleMooneyRivlinElastic::impK() const
+Foam::tmp<Foam::volScalarField> Foam::incompressibleHumphreyYinElastic::impK() const
 {
     return tmp<volScalarField>
     (
@@ -124,7 +124,7 @@ Foam::tmp<Foam::volScalarField> Foam::incompressibleMooneyRivlinElastic::impK() 
 }
 
 
-void Foam::incompressibleMooneyRivlinElastic::correct
+void Foam::incompressibleHumphreyYinElastic::correct
 (
     volSymmTensorField& sigma
 )
@@ -176,7 +176,7 @@ void Foam::incompressibleMooneyRivlinElastic::correct
 }
 
 
-void Foam::incompressibleMooneyRivlinElastic::correct(surfaceSymmTensorField& sigma)
+void Foam::incompressibleHumphreyYinElastic::correct(surfaceSymmTensorField& sigma)
 {
     // Update the deformation gradient field
     // Note: if true is returned, it means that linearised elasticity was
