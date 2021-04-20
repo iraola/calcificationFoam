@@ -15,6 +15,9 @@
 !src/solids4FoamModels/materialModels/mechanicalModel/mechanicalLaws/nonLinearGeometryLaws/incompressibleHumphreyYinElastic/*
 !src/solids4FoamModels/Make/*
 !tutorials/solids/hyperelasticity/longWallBijelonjaHumphreyYin/*
+!tutorials/solids/hyperelasticity/longWallBijelonjaHumphreyYin/0/*
+!tutorials/solids/hyperelasticity/longWallBijelonjaHumphreyYin/constant/*
+!tutorials/solids/hyperelasticity/longWallBijelonjaHumphreyYin/system/*
 #
 
 notes.txt
