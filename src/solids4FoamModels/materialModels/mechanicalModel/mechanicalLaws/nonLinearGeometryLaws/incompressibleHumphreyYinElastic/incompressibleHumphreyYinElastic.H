@@ -128,7 +128,7 @@ class incompressibleHumphreyYinElastic
 public:
 
     //- Runtime type information
-    TypeName("incompressibleMooneyRivlin");
+    TypeName("incompressibleHumphreyYin");
 
     // Static data members
 
